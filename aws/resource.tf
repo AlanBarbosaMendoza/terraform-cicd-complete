@@ -3,6 +3,10 @@ variable "aws_region" {
   default = "us-east-1"
 }
 
+
+
+
+
 resource "aws_s3_bucket" "demo" {
   bucket = "cisco-raman-terraform-ci-demo-${random_id.suffix.hex}"
 
@@ -58,3 +62,8 @@ resource "aws_s3_bucket_lifecycle_configuration" "demo" {
     }
   }
 }
+
+
+
+
+
