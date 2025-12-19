@@ -34,8 +34,8 @@ jobs:
           directory: .
           framework: terraform
           quiet: false
-
-
+          config_file: .checkov.yml
+     
 
 
    
