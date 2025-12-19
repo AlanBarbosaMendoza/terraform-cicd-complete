@@ -35,7 +35,7 @@ jobs:
           framework: terraform
           quiet: false
           #skip_check: CKV_AWS_145,CKV2_AWS_62,CKV_AWS_18,CKV_AWS_144,CKV_AWS_300
-          baseline: .checkov.yml
+          baseline: .checkov.yaml
 
 
    
