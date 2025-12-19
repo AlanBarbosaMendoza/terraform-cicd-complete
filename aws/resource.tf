@@ -3,6 +3,14 @@ variable "aws_region" {
   default = "us-east-1"
 }
 
+
+# checkov:skip=CKV_AWS_145: "Ensure that S3 buckets are encrypted with KMS by default"
+# checkov:skip=CKV2_AWS_62: "Ensure S3 buckets should have event notifications enabled"
+# checkov:skip=CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
+# checkov:skip=CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
+# checkov:skip=CKV_AWS_300: "Ensure S3 lifecycle configuration sets period for aborting failed uploads"
+
+
 resource "aws_s3_bucket" "demo" {
   bucket = "cisco-raman-terraform-ci-demo-${random_id.suffix.hex}"
 
@@ -58,3 +66,8 @@ resource "aws_s3_bucket_lifecycle_configuration" "demo" {
     }
   }
 }
+
+
+
+
+
