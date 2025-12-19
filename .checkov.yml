@@ -1,6 +1,0 @@
-skip_checks:
-  - CKV_AWS_145   # KMS not required for CI bucket
-  - CKV2_AWS_62   # No event-driven workflows needed
-  - CKV_AWS_18    # Access logging unnecessary for short-lived buckets
-  - CKV_AWS_144   # Cross-region replication not required
-  - CKV_AWS_300   # Multipart abort lifecycle not enforced
